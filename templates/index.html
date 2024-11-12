@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/image/11.jpg');
+            background-color: hsl(190, 78%, 91%);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            /* background-image: url('/image/11.jpg'); */
+            background-image: url('/static/image/11.jpg');
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Question Generator</h2>
+        <form id="question-form">
+            <label for="context">Context:</label>
+            <textarea id="context" name="context" rows="4" placeholder="Enter the context..." required></textarea>
+            
+            <label for="answer">Answer:</label>
+            <input type="text" id="answer" name="answer" placeholder="Enter the answer..." required>
+
+            <button type="submit" id="submit-btn">Generate Question</button>
+        </form>
+
+        <div id="output" class="output" style="display: none;">
+            <h3>Generated Question:</h3>
+            <p id="generated-question"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('submit-btn').onclick = async function(e) {
+            e.preventDefault();
+            const context = document.getElementById('context').value;
+            const answer = document.getElementById('answer').value;
+
+            const response = await fetch('http://127.0.0.1:5000/generate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ context: context, answer: answer }),
+            });
+
+            const result = await response.json();
+        
+            document.getElementById('generated-question').innerText = result.generated_question;
+            document.getElementById('output').style.display = 'block';
+        };
+    </script>
+</body>
+</html>
