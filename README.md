@@ -32,7 +32,7 @@ Modify the loss function to include feedback by measuring the similarity between
 The enhanced loss function incorporates feedback to achive more accurate and contextually aligned question generation, is defined as follows:
 
 
-$Total \ Loss = \alpha * loss + (1 - \alpha) * secondary \ loss \ weight * reward$
+      $Total \ Loss = \alpha * loss + (1 - \alpha) * secondary \ loss \ weight * reward$
 
 
 where:
