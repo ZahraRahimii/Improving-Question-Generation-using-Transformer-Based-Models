@@ -26,9 +26,9 @@ Modify the loss function to include feedback by measuring the similarity between
   <img src = "https://github.com/user-attachments/assets/8a93eabc-f775-4124-91f1-823d68670d3a"
 </p>
 
-The enhanced loss function, incorporating feedback for improved question relevance, is defined as follows:
+The enhanced loss function incorporates feedback to achive more accurate and contextually aligned question generation, is defined as follows:
 ``` math
-Total Loss = \alpha * loss + (1 - \alpha) * secondary loss weight * reward
+Total \ Loss = \alpha * loss + (1 - \alpha) * secondary \ loss \ weight * reward
 ```
 
 where:
@@ -37,3 +37,19 @@ where:
 * $reward$: A feedback term that measures the similarity between the generated question and the target question.
 * $\alpha$: A weighting factor that balances the influence of the primary loss and the feedback.
 * $secondary \ loss \ weight$: A coefficient that adjusts the impact of the feedback term.
+
+## Evaluation
+The model's performance is evaluated using two automated metrics: METEOR and ROUGE-L, which assess accuracy and alignment between generated and target questions. Below are the results:
+| Model | METEOR | ROUGE-L  |
+| :---:   | :---: | :---: |
+| T5 | 0.31   | 0.20  |
+| T5 + Feedback-Enhanced Loss | 0.33   | 0.21  |
+
+These results illustrate the model's improvement in question generation accuracy and relevance after implementing the feedback mechanism.
+
+## Ablation Study
+An ablation study was conducted to experiment with various parameters and configurations to optimize model performance. This study involved adjusting parameters such as dataset size and feedback weights ($\alpha$ and $secondary \ loss \ weight$ to reach the best-performing model. The findings provide insights into which configurations most effectively enhance question generation accuracy and model stability.
+
+<p align=center>
+  <img src = "https://github.com/user-attachments/assets/f7a4d0d4-70f9-4f67-8113-a0dfca7cb3f5"
+</p>
