@@ -59,7 +59,7 @@ An ablation study was conducted to experiment with various parameters and config
   <img src = "https://github.com/user-attachments/assets/40dd4edf-8df7-4413-a2f6-06a46b965bf9"
 </p>
 
-## Set-Up
+## Train the Model From Scratch
 1. Create Directories for Data and Model
 ``` python
 mkdir data model
@@ -78,4 +78,37 @@ python preprocessing.py
 python transformer_model.py
 ```
 
+## Quick Start: Using the Trained Model
+This guide will walk you through the steps to quickly get started with using the Question Generation model for generating questions from context and answer.
+1. Install the dependencies
+``` python
+pip install -r requirements.txt
+```
 
+2. Clone the Repository
+``` python
+git clone https://github.com/ZahraRahimii/Improving-Question-Generation-using-Transformer-Based-Models
+cd Improving-Question-Generation-using-Transformer-Based-Models  
+```
+3. Load the Model and Tokenizer
+``` python
+from transformers import T5ForConditionalGeneration, T5Tokenizer
+
+# Load the pre-trained model and tokenizer
+model = T5ForConditionalGeneration.from_pretrained(os.path.join(config.model_path, 't5_trained_model_20'))
+tokenizer = T5Tokenizer.from_pretrained(os.path.join(config.model_path, 't5_tokenizer_20'))
+
+# Input text to generate questions
+context = "The Pacific Ocean is the largest and deepest of Earth's oceanic divisions."
+answer = "The Pacific Ocean"
+text = "context: " + context + " " + "answer: " + answer
+
+# Tokenize the input
+input_ids = t5_tokenizer.encode(text, return_tensors="pt", max_length=400, truncation=True)
+
+# Generate question
+output_ids = t5_model.generate(input_ids=input_ids, max_length=40)
+generated_question = t5_tokenizer.decode(output_ids[0], skip_special_tokens=True)
+
+print(f"Generated Question: {generated_question}")
+```
