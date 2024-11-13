@@ -3,7 +3,7 @@ This project aims to enhance question generation by introducing a feedback mecha
 
 This project includes the following main steps:
 <details>
-<summary>### Data Preprocessing </summary>
+<summary> Data Preprocessing </summary>
 Prepare the [SQuAD](https://www.kaggle.com/datasets/stanfordu/stanford-question-answering-dataset) dataset with fields for 'context,' 'question,' and 'answer.'
 <p align=center>
   <img src = "https://github.com/user-attachments/assets/a1589919-ea36-48ec-9ce9-6104df7f478b"
@@ -11,7 +11,7 @@ Prepare the [SQuAD](https://www.kaggle.com/datasets/stanfordu/stanford-question-
 </details>
 
 <details>
-### Fine-tuning T5 on SQuAD
+<summary> Fine-tuning T5 on SQuAD </summary>
 Train a T5 model on the SQuAD dataset, focusing on generating questions from context and answer pairs.
 
 <p align=center>
@@ -20,7 +20,7 @@ Train a T5 model on the SQuAD dataset, focusing on generating questions from con
 </details>
 
 <details>
-### Feedback-Enhanced Loss 
+<summary> Feedback-Enhanced Loss </summary>
 Modify the loss function to include feedback by measuring the similarity between generated and target questions, which allows for iterative improvement in question relevance.
 
 <p align=center>
