@@ -36,4 +36,4 @@ where:
 * $loss$: The primary loss from the model's output.
 * $reward$: A feedback term that measures the similarity between the generated question and the target question.
 * $\alpha$: A weighting factor that balances the influence of the primary loss and the feedback.
-* $secondary  loss  weight$: A coefficient that adjusts the impact of the feedback term.
+* $secondary \ loss \ weight$: A coefficient that adjusts the impact of the feedback term.
