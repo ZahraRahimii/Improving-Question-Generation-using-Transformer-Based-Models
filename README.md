@@ -95,8 +95,8 @@ cd Improving-Question-Generation-using-Transformer-Based-Models
 from transformers import T5ForConditionalGeneration, T5Tokenizer
 
 # Load the pre-trained model and tokenizer
-model = T5ForConditionalGeneration.from_pretrained(os.path.join(config.model_path, 't5_trained_model_20'))
-tokenizer = T5Tokenizer.from_pretrained(os.path.join(config.model_path, 't5_tokenizer_20'))
+model = T5ForConditionalGeneration.from_pretrained(os.path.join('model', 't5_trained_model_20'))
+tokenizer = T5Tokenizer.from_pretrained(os.path.join('model', 't5_tokenizer_20'))
 
 # Input text to generate questions
 context = "The Pacific Ocean is the largest and deepest of Earth's oceanic divisions."
