@@ -51,5 +51,5 @@ These results illustrate the model's improvement in question generation accuracy
 An ablation study was conducted to experiment with various parameters and configurations to optimize model performance. This study involved adjusting parameters such as dataset size and feedback weights ($\alpha$ and $secondary \ loss \ weight$ to reach the best-performing model. The findings provide insights into which configurations most effectively enhance question generation accuracy and model stability.
 
 <p align=center>
-  <img src = "https://github.com/user-attachments/assets/f7a4d0d4-70f9-4f67-8113-a0dfca7cb3f5"
+  <img src = "https://github.com/user-attachments/assets/40dd4edf-8df7-4413-a2f6-06a46b965bf9"
 </p>
