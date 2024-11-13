@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/5c772e27-9102-4b0a-afd1-dbcb6bc0b9c4)# Improving Question Generation with Transformer Based Models
+# Improving Question Generation with Transformer Based Models
 
 This project aims to enhance question generation by introducing a feedback mechanism within the loss function that calculates the similarity between generated and target questions. This feedback-driven approach helps the model produce more accurate and contextually relevant questions.
 
