@@ -3,7 +3,7 @@ This project aims to enhance question generation by introducing a feedback mecha
 
 This project includes the following main steps:
 <details>
-### Data Preprocessing
+<summary>### Data Preprocessing </summary>
 Prepare the [SQuAD](https://www.kaggle.com/datasets/stanfordu/stanford-question-answering-dataset) dataset with fields for 'context,' 'question,' and 'answer.'
 <p align=center>
   <img src = "https://github.com/user-attachments/assets/a1589919-ea36-48ec-9ce9-6104df7f478b"
