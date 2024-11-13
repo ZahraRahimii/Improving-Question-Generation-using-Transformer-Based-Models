@@ -4,7 +4,7 @@ This project aims to enhance question generation by introducing a feedback mecha
 This project includes the following main steps:
 
 ### Data Preprocessing
-Prepare a dataset with "context", "question", and "answer" fields.
+Prepare the SQuAD dataset with fields for 'context,' 'question,' and 'answer.'
 <p align=center>
   <img src = "https://github.com/user-attachments/assets/a1589919-ea36-48ec-9ce9-6104df7f478b"
 </p>
