@@ -58,4 +58,11 @@ An ablation study was conducted to experiment with various parameters and config
 pip install -r requirements.txt
 ```
 * Run python preprocessing.py to preprocess the data
+``` python
+python preprocessing.py
+```
+
 * Run python transformer_model.py to train/eval the model with hyper-parameters found in config.py
+``` python
+* python transformer_model.py
+```
