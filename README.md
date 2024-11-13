@@ -42,11 +42,13 @@ where:
 
 ## Evaluation
 The model's performance is evaluated using two automated metrics: METEOR and ROUGE-L, which assess accuracy and alignment between generated and target questions. Below are the results:
+<p align=center>
+
 | Model | METEOR | ROUGE-L  |
 | :---:   | :---: | :---: |
 | T5 | 0.31   | 0.20  |
 | T5 + Feedback-Enhanced Loss | 0.33   | 0.21  |
-
+</p>
 These results illustrate the model's improvement in question generation accuracy and relevance after implementing the feedback mechanism.
 
 ## Ablation Study
