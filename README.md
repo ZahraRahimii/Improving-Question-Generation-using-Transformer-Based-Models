@@ -2,21 +2,24 @@
 This project aims to enhance question generation by introducing a feedback mechanism within the loss function that calculates the similarity between generated and target questions. This feedback-driven approach helps the model produce more accurate and contextually relevant questions.
 
 This project includes the following main steps:
-
+<details>
 ### Data Preprocessing
 Prepare the [SQuAD](https://www.kaggle.com/datasets/stanfordu/stanford-question-answering-dataset) dataset with fields for 'context,' 'question,' and 'answer.'
 <p align=center>
   <img src = "https://github.com/user-attachments/assets/a1589919-ea36-48ec-9ce9-6104df7f478b"
 </p>
+</details>
 
+<details>
 ### Fine-tuning T5 on SQuAD
 Train a T5 model on the SQuAD dataset, focusing on generating questions from context and answer pairs.
 
 <p align=center>
   <img src = "https://github.com/user-attachments/assets/28bb2f23-223f-43e6-943c-20b34654937f"
 </p>
+</details>
 
-
+<details>
 ### Feedback-Enhanced Loss 
 Modify the loss function to include feedback by measuring the similarity between generated and target questions, which allows for iterative improvement in question relevance.
 
@@ -35,6 +38,7 @@ where:
 * $reward$: A feedback term that measures the similarity between the generated question and the target question.
 * $\alpha$: A weighting factor that balances the influence of the primary loss and the feedback.
 * $secondary \ loss \ weight$: A coefficient that adjusts the impact of the feedback term.
+</details>
 
 ## Evaluation
 The model's performance is evaluated using two automated metrics: METEOR and ROUGE-L, which assess accuracy and alignment between generated and target questions. Below are the results:
@@ -57,7 +61,6 @@ An ablation study was conducted to experiment with various parameters and config
 ``` python
 mkdir data model
 ```
-
 2. Install the dependencies
 ``` python
 pip install -r requirements.txt
@@ -69,5 +72,7 @@ python preprocessing.py
 
 4. Run python transformer_model.py to train/eval the model with hyper-parameters found in config.py
 ``` python
-* python transformer_model.py
+python transformer_model.py
 ```
+
+
