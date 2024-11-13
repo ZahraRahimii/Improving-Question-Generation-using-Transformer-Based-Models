@@ -53,16 +53,21 @@ An ablation study was conducted to experiment with various parameters and config
 </p>
 
 ## Set-Up
-* Install the dependencies
+1. Create Directories for Data and Model
+``` python
+mkdir data model
+```
+
+2. Install the dependencies
 ``` python
 pip install -r requirements.txt
 ```
-* Run python preprocessing.py to preprocess the data
+3. Run python preprocessing.py to preprocess the data
 ``` python
 python preprocessing.py
 ```
 
-* Run python transformer_model.py to train/eval the model with hyper-parameters found in config.py
+4. Run python transformer_model.py to train/eval the model with hyper-parameters found in config.py
 ``` python
 * python transformer_model.py
 ```
