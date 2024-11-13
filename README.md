@@ -11,11 +11,13 @@ Prepare a dataset with "context", "question", and "answer" fields.
   <img src = "https://github.com/user-attachments/assets/a1589919-ea36-48ec-9ce9-6104df7f478b"
 </div>
 
+
 ### Fine-tuning T5 on SQuAD: 
 Train a T5 model on the SQuAD dataset, focusing on generating questions from context and answer pairs.
 <div align=center>
   <img src = "https://github.com/user-attachments/assets/a1589919-ea36-48ec-9ce9-6104df7f478b"
 </div>
+
 
 ### Feedback-Enhanced Loss: 
 Modify the loss function to include feedback by measuring the similarity between generated and target questions, which allows for iterative improvement in question relevance.
