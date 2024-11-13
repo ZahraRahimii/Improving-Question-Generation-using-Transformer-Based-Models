@@ -22,6 +22,7 @@ Train a T5 model on the SQuAD dataset, focusing on generating questions from con
 
 <details>
 <summary> Feedback-Enhanced Loss </summary>
+  
 Modify the loss function to include feedback by measuring the similarity between generated and target questions, which allows for iterative improvement in question relevance.
 
 <p align=center>
@@ -29,6 +30,7 @@ Modify the loss function to include feedback by measuring the similarity between
 </p>
 
 The enhanced loss function incorporates feedback to achive more accurate and contextually aligned question generation, is defined as follows:
+
 ``` math
 Total \ Loss = \alpha * loss + (1 - \alpha) * secondary \ loss \ weight * reward
 ```
