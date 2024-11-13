@@ -51,3 +51,11 @@ An ablation study was conducted to experiment with various parameters and config
 <p align=center>
   <img src = "https://github.com/user-attachments/assets/40dd4edf-8df7-4413-a2f6-06a46b965bf9"
 </p>
+
+## Set-Up
+* Install the dependencies
+``` python
+pip install -r requirements.txt
+```
+* Run python preprocessing.py to preprocess the data
+* Run python transformer_model.py to train/eval the model with hyper-parameters found in config.py
