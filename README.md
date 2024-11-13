@@ -27,14 +27,13 @@ Modify the loss function to include feedback by measuring the similarity between
 </p>
 
 The enhanced loss function, incorporating feedback for improved question relevance, is defined as follows:
-<pre>
 ``` math
 Total Loss = \alpha * loss + (1 - \alpha) * secondary loss weight * reward
 ```
-</pre>
+
 where:
 
 * $loss$: The primary loss from the model's output.
 * $reward$: A feedback term that measures the similarity between the generated question and the target question.
 * $\alpha$: A weighting factor that balances the influence of the primary loss and the feedback.
-* $secondary loss weight$: A coefficient that adjusts the impact of the feedback term.
+* $secondary  loss  weight$: A coefficient that adjusts the impact of the feedback term.
