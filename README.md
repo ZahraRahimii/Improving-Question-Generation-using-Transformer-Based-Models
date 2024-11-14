@@ -7,7 +7,7 @@ This project includes the following main steps:
   
 Prepare the [SQuAD](https://www.kaggle.com/datasets/stanfordu/stanford-question-answering-dataset) dataset with fields for 'context,' 'question,' and 'answer.'
 <p align=center>
-  <img src = "https://github.com/user-attachments/assets/a1589919-ea36-48ec-9ce9-6104df7f478b"
+  <img src= "https://github.com/user-attachments/assets/a1589919-ea36-48ec-9ce9-6104df7f478b"
 </p>
 </details>
 
