@@ -59,16 +59,15 @@ An ablation study was conducted to experiment with various parameters and config
 
 |                **Model**                | **METEOR** | **ROUGE-L** |
 | :-------------------------------------: | :--------: | :---------: |
+|           T5 + RL, 100 samples          |    0.21    |     0.33    |
+|             T5, 100 samples             |    0.18    |     0.34    |
+|          T5 + RL, 1000 samples          |    0.21    |     0.33    |
+|             T5, 1000 samples            |    0.20    |     0.31    |
 |            T5 + RL, Alpha=0.7           |    0.21    |     0.32    |
 |            T5 + RL, Alpha=0.2           |    0.20    |     0.32    |
 |            T5 + RL, Alpha=0.5           |    0.21    |     0.33    |
 | T5 + RL, secondary\_loss\_weight = -1.5 |    0.21    |     0.33    |
 |  T5 + RL, secondary\_loss\_weight = -4  |    0.20    |     0.30    |
-|           T5 + RL, 100 samples          |    0.21    |     0.33    |
-|             T5, 100 samples             |    0.18    |     0.34    |
-|          T5 + RL, 1000 samples          |    0.21    |     0.33    |
-|             T5, 1000 samples            |    0.20    |     0.31    |
-
 
 ## Train the Model From Scratch
 1. Create Directories for Data and Model
