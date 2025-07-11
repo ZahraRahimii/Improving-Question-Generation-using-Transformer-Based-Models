@@ -53,7 +53,7 @@ The model's performance is evaluated using two automated metrics: METEOR and ROU
 These results illustrate the model's improvement in question generation accuracy and relevance after implementing the feedback mechanism.
 
 ## Ablation Study
-An ablation study was conducted to experiment with various parameters and configurations to optimize model performance. This study involved adjusting parameters such as dataset size and feedback weights ($\alpha$ and $secondary \ loss \ weight$ to reach the best-performing model.
+An ablation study was conducted to experiment with various parameters and configurations to optimize model performance. This study involved adjusting parameters such as dataset size and feedback weights ($\alpha$ and $secondary \ loss \ weight$) to reach the best-performing model.
 
 |                **Model**                | **METEOR** | **ROUGE-L** |
 | :-------------------------------------: | :--------: | :---------: |
