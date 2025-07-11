@@ -55,9 +55,11 @@ These results illustrate the model's improvement in question generation accuracy
 ## Ablation Study
 An ablation study was conducted to experiment with various parameters and configurations to optimize model performance. This study involved adjusting parameters such as dataset size and feedback weights ($\alpha$ and $secondary \ loss \ weight$ to reach the best-performing model.
 
-<p align=center>
-  <img src = "https://github.com/user-attachments/assets/40dd4edf-8df7-4413-a2f6-06a46b965bf9"
-</p>
+| Metric \ Model Configuration | T5 + RL, Alpha=0.7 | T5 + RL, Alpha=0.2 | T5 + RL, Alpha=0.5 | T5 + RL, secondary\_loss\_weight = -1.5 | T5 + RL, secondary\_loss\_weight = -4 | T5 + RL, 100 samples | T5, 100 samples | T5 + RL, 1000 samples | T5, 1000 samples |
+
+| ---------------------------- | ------------------ | ------------------ | ------------------ | --------------------------------------- | ------------------------------------- | -------------------- | --------------- | --------------------- | ---------------- |
+| **Rouge-L**                  | 0.32               | 0.32               | 0.33               | 0.33                                    | 0.30                                  | 0.33                 | 0.34            | 0.33                  | 0.31             |
+| **METEOR**                   | 0.21               | 0.20               | 0.21               | 0.21                                    | 0.20                                  | 0.21                 | 0.18            | 0.21                  | 0.20             |
 
 ## Train the Model From Scratch
 1. Create Directories for Data and Model
