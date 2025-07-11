@@ -55,8 +55,6 @@ These results illustrate the model's improvement in question generation accuracy
 ## Ablation Study
 An ablation study was conducted to experiment with various parameters and configurations to optimize model performance. This study involved adjusting parameters such as dataset size and feedback weights ($\alpha$ and $secondary \ loss \ weight$ to reach the best-performing model.
 
-| Metric \ Model Configuration | T5 + RL, Alpha=0.7 | T5 + RL, Alpha=0.2 | T5 + RL, Alpha=0.5 | T5 + RL, secondary\_loss\_weight = -1.5 | T5 + RL, secondary\_loss\_weight = -4 | T5 + RL, 100 samples | T5, 100 samples | T5 + RL, 1000 samples | T5, 1000 samples |
-
 |                **Model**                | **METEOR** | **ROUGE-L** |
 | :-------------------------------------: | :--------: | :---------: |
 |           T5 + RL, 100 samples          |    0.21    |     0.33    |
